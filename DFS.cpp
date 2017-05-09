@@ -3,8 +3,7 @@ using namespace std;
 struct node{
     char data;
     struct node *next;
-    
-};
+    };
 struct vnode{
     struct node *head;
     char data;
@@ -76,7 +75,7 @@ public:
                     newnode=vertex[i].head;
                 while(newnode!=NULL){
                     if(!isVisted(newnode->data)){
-                        DFS(vertex[i].data);
+                        DFS(newnode->data);
                     }
                     newnode=newnode->next;
                 }
